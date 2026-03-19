@@ -27,7 +27,7 @@ def handle_message(event):
     user_message = event.message.text
     
     # 設定觸發自動回覆的關鍵字清單
-    order_keywords = ["預定", "預約", "訂購", "訂餐", "我要訂", "預留"]
+    order_keywords = ["預定", "預約", "訂購", "訂餐", "我要訂", "預留", "自取"]
     
     # 檢查客人的訊息中是否包含上述任一關鍵字
     if any(keyword in user_message for keyword in order_keywords):
@@ -35,8 +35,6 @@ def handle_message(event):
             "您好！感謝您的詢問😊\n\n"
             "若是「當日訂單」或較急迫的需求，為了避免訊息漏接或回覆較慢，"
             "建議您直接致電門市，將由專人立刻為您處理喔！\n\n"
-            "📞 門市電話：03-XXXX-XXXX\n"
-            "📍 門市地址：新竹縣竹北市XXXXXX"
         )
         
         # 回傳訊息給客人
